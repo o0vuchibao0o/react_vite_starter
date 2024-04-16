@@ -1,6 +1,10 @@
 import { useState } from "react";
 import InputTodo from "./todo/input.todo";
 
+const EricComponent = () => {
+  return <div>Im eric</div>;
+};
+
 const App = () => {
   const [listTodo, setListTodo] = useState([
     "todo 1",
@@ -36,7 +40,10 @@ const App = () => {
         // ericFunction={handleTest}
         listTodo={listTodo}
         setListTodo={setListTodo}
-      />
+      >
+        {/* <span>hoi dan it</span> */}
+        <EricComponent />
+      </InputTodo>
       <br />
       <ul>
         {listTodo.map((item, index) => {

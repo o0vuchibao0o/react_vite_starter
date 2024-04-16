@@ -11,6 +11,7 @@ interface IProps {
   // ericFunction: (name: string) => void;
   listTodo: string[];
   setListTodo: (value: string[]) => void;
+  children: React.ReactNode;
 }
 
 const InputTodo = (props: IProps) => {
@@ -31,6 +32,7 @@ const InputTodo = (props: IProps) => {
   return (
     <div style={{ border: "1px solid red" }}>
       <div>Add new todo</div>
+      {props.children}
       <input
         type="text"
         value={todo}
